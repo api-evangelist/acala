@@ -1,0 +1,40 @@
+generated: '2026-07-17'
+method: searched
+source: https://evmdocs.acala.network/tooling/faucet.md
+description: >-
+  Test/sandbox surface for Acala EVM+. Development happens against the Mandala
+  TC9 public testnet, a dockerized local development network, or a Chopsticks
+  fork of mainnet. Testnet funds are dispensed by a Discord faucet. No secret
+  test API keys exist — access is permissionless and transactions are signed by
+  a wallet holding testnet tokens.
+test_networks:
+- name: Mandala TC9 (public testnet)
+  chain_id: 595
+  symbol: mACA
+  eth_rpc_endpoint: https://eth-rpc-tc9.aca-staging.network
+  node_endpoint: wss://mandala-tc9-rpc.aca-staging.network
+  explorer: https://blockscout.mandala.aca-staging.network
+- name: Mandala Local (dockerized local dev net)
+  chain_id: 595
+  symbol: mACA
+  eth_rpc_endpoint: http://127.0.0.1:8545
+  node_endpoint: ws://127.0.0.1:9944
+faucet:
+  type: discord
+  channel: "#acala-testnet-faucet"
+  invite: https://discord.gg/5JJgXKSznc
+  command: "!drip <mandala-address>"
+  dispenses: [ACA, DOT, KSM, LKSM]
+  docs: https://evmdocs.acala.network/tooling/faucet.md
+fork_testing:
+  tool: "@acala-network/chopsticks"
+  description: >-
+    Chopsticks creates a parallel-reality fork of Acala/Karura mainnet so you
+    can dry-run and replay transactions against real state locally.
+  install: npm install @acala-network/chopsticks
+evm_playground:
+  url: https://evmdocs.acala.network/tooling/evm-playground.md
+  description: Browser EVM Playground to deploy and interact with contracts on testnet.
+notes: >-
+  No published test card numbers or magic test identifiers (not a payments
+  API); the sandbox model is a permissionless testnet plus faucet-funded wallet.

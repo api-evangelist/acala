@@ -1,0 +1,55 @@
+generated: '2026-07-17'
+method: searched
+source: https://evmdocs.acala.network/
+description: >-
+  Cross-cutting standards Acala EVM+ conforms to. Acala is not a REST/OpenAPI
+  provider; its developer-facing API is the Ethereum JSON-RPC surface served by
+  the EVM+ RPC Adapter, which implements the Ethereum execution-apis method set
+  so that standard Ethereum tooling interoperates. Substrate access is via the
+  Polkadot JSON-RPC. Evidence is drawn from the published EVM+ docs.
+standards:
+- id: ethereum-json-rpc
+  name: Ethereum JSON-RPC (execution-apis)
+  conforms: true
+  evidence: >-
+    EVM+ RPC Adapter wraps Substrate RPC to serve the Ethereum JSON-RPC method
+    set (eth_*, net_*, web3_*) documented at
+    https://ethereum.github.io/execution-apis/api-documentation/
+- id: eip-1193
+  name: EIP-1193 Ethereum Provider JavaScript API
+  conforms: true
+  evidence: >-
+    MetaMask and ethers.js/bodhi providers connect to EVM+ over the standard
+    EIP-1193 provider interface (docs: tooling/metamask).
+- id: erc-20
+  name: ERC-20 Token Standard
+  conforms: true
+  evidence: >-
+    Native tokens (ACA, DOT, etc.) are exposed as ERC-20 via predeployed Token
+    precompiles; @acala-network/contracts ships the interfaces.
+- id: evm-solidity
+  name: Ethereum Virtual Machine / Solidity
+  conforms: true
+  evidence: >-
+    Acala EVM+ executes Solidity smart contracts; deployable via Remix, Hardhat,
+    Truffle and the EVM Playground.
+- id: polkadot-json-rpc
+  name: Polkadot / Substrate JSON-RPC
+  conforms: true
+  evidence: >-
+    Node WebSocket endpoints (wss://acala-rpc.aca-api.network) served via the
+    Polkadot.js API and @acala-network/api.
+- id: json-rpc-2.0
+  name: JSON-RPC 2.0
+  conforms: true
+  evidence: Both the Ethereum and Substrate RPC layers use JSON-RPC 2.0 envelopes.
+- id: rfc9457-problem-details
+  name: RFC 9457 Problem Details
+  conforms: false
+  evidence: Errors use the JSON-RPC 2.0 error object, not application/problem+json.
+- id: oauth2
+  name: OAuth 2.0
+  conforms: false
+  evidence: >-
+    No server-side auth; access is permissionless and transactions are
+    authorized by client-side wallet signatures (secp256k1 / sr25519).

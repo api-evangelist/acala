@@ -1,0 +1,61 @@
+generated: '2026-07-17'
+method: searched
+source: https://evmdocs.acala.network/
+description: >-
+  Cross-cutting request/response semantics for the Acala EVM+ JSON-RPC surface.
+  This API is an Ethereum-compatible JSON-RPC endpoint (served by the EVM+ RPC
+  Adapter) plus a Substrate WebSocket RPC — not a REST API — so the conventions
+  below follow the JSON-RPC 2.0 and Ethereum execution-apis models rather than
+  HTTP resource conventions.
+transport:
+  protocols: [https-json-rpc, websocket-json-rpc]
+  envelope: json-rpc-2.0
+  methods_namespace: [eth_, net_, web3_, txpool_, eth_subscribe]
+  eth_rpc_endpoint: https://eth-rpc-acala.aca-api.network
+  substrate_ws_endpoint: wss://acala-rpc.aca-api.network
+authentication:
+  style: none-server-side
+  model: >-
+    Permissionless. Read calls are unauthenticated; state-changing calls are
+    signed client-side by the sender's wallet (secp256k1 for EVM+ / sr25519 for
+    Substrate) and submitted as raw signed transactions (eth_sendRawTransaction).
+  wallets: [MetaMask, Polkadot.js, bodhi.js]
+idempotency:
+  supported: true
+  mechanism: transaction-nonce
+  note: >-
+    EVM+ uses Ethereum-style per-account transaction nonces for replay
+    protection: a transaction with a given nonce can be included at most once,
+    and resubmitting an already-mined nonce fails ("Transaction is outdated").
+    There is no HTTP Idempotency-Key header (JSON-RPC, not REST).
+gas:
+  model: acala-evm+
+  parameters: [gasLimit, storageLimit, validUntil, tip]
+  docs: https://evmdocs.acala.network/network/gas-parameters.md
+  note: >-
+    EVM+ encodes an additional storageLimit and validUntil (block validity
+    window) into the standard Ethereum gasPrice/gasLimit fields; helper SDKs
+    (@acala-network/eth-providers) compute these automatically.
+pagination:
+  style: block-range
+  note: >-
+    Log/history queries use fromBlock/toBlock ranges (eth_getLogs); the SubQuery
+    indexer (https://subql-query-acala.aca-api.network) offers GraphQL pagination.
+error_envelope:
+  shape: json-rpc-2.0-error
+  catalog: errors/acala-error-codes.yml
+  note: Chain errors surface as code -32603 with a Substrate DispatchError { index, error }.
+versioning:
+  ref: lifecycle/acala-lifecycle.yml
+  scheme: network-and-runtime
+events:
+  mechanism: eth_subscribe (WebSocket pub/sub)
+  note: >-
+    Real-time updates via JSON-RPC WebSocket subscriptions (newHeads, logs);
+    there is no webhook or AsyncAPI surface.
+predeployed_contracts:
+  docs: https://evmdocs.acala.network/network/predeployed-smart-contracts.md
+  note: >-
+    Native chain features (Token, DEX, Homa liquid staking, StableAsset, EVM,
+    Oracle, Schedule) are reachable from Solidity via predeployed precompiles;
+    interfaces ship in @acala-network/contracts.

@@ -1,8 +1,16 @@
 aid: acala
 name: Acala
-description: 'Acala is a company surfaced as a portfolio company of pantera-capital, polychain and added
-  to the API Evangelist network as a stub for enrichment. Sector: crypto. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Acala is the decentralized finance (DeFi) and liquidity hub of the Polkadot
+  ecosystem, operating the Acala parachain (and its Kusama-based sister network
+  Karura). Acala offers a scalable, Ethereum-compatible smart-contract platform
+  called Acala EVM+, a decentralized stablecoin (aUSD), a liquid staking
+  derivative (LDOT/LcDOT), and a trustless staking and swap layer. For
+  developers, Acala EVM+ exposes a standard Ethereum JSON-RPC interface through
+  its EVM+ RPC Adapter (eth-rpc-adapter), letting existing Ethereum dApps,
+  wallets (MetaMask), and tooling (Hardhat, Remix, ethers.js, Truffle) interact
+  with the Substrate-based chain with minimal changes, alongside a Substrate
+  WebSocket RPC via the @acala-network Polkadot.js API and SDK packages.
 url: https://raw.githubusercontent.com/api-evangelist/acala/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,18 +19,100 @@ x-backed-by:
 - polychain
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
 modified: '2026-07-17'
+image: https://acala.network/acala-og-card2.png
 tags:
 - Company
 - Crypto
-apis: []
+- Blockchain
+- DeFi
+- Polkadot
+- Smart Contracts
+- EVM
+- Stablecoin
+- JSON-RPC
+- Web3
+apis:
+- name: Acala EVM+ JSON-RPC
+  description: >-
+    Acala EVM+ exposes a standard Ethereum JSON-RPC API through the EVM+ RPC
+    Adapter, which wraps Substrate RPC calls to provide Ethereum execution-apis
+    compatible endpoints (eth_*, net_*, web3_*) so Ethereum dApps and tooling
+    can interact with the Acala and Karura EVM+ environments. A Substrate
+    WebSocket RPC is also available for Polkadot.js-based access.
+  humanURL: https://evmdocs.acala.network/
+  baseURL: https://eth-rpc-acala.aca-api.network
+  tags:
+  - EVM
+  - JSON-RPC
+  - Smart Contracts
+  - Ethereum
+  properties:
+  - type: Documentation
+    url: https://evmdocs.acala.network/
+  - type: APIReference
+    url: https://ethereum.github.io/execution-apis/api-documentation/
+  - type: GettingStarted
+    url: https://evmdocs.acala.network/readme.md
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/acala-domain-security.yml
 - type: Website
   url: https://acala.network/
+- type: DeveloperPortal
+  url: https://evmdocs.acala.network/
+- type: Documentation
+  url: https://wiki.acala.network/
+- type: GettingStarted
+  url: https://evmdocs.acala.network/readme.md
+- type: GitHubOrganization
+  url: https://github.com/AcalaNetwork
+- type: Blog
+  url: https://acala.network/blog
+- type: Support
+  url: https://discord.gg/5JJgXKSznc
+- type: PrivacyPolicy
+  url: https://acala.network/privacy-policy
+- type: TermsOfService
+  url: https://acala.network/terms-of-use
+- type: Packages
+  url: packages/acala-packages.yml
+- type: SDKs
+  url: packages/acala-packages.yml
+- type: LLMsTxt
+  url: llms/acala-llms.txt
+- type: Conformance
+  url: conformance/acala-conformance.yml
+- type: ErrorCatalog
+  url: errors/acala-error-codes.yml
+- type: Lifecycle
+  url: lifecycle/acala-lifecycle.yml
+- type: Sandbox
+  url: sandbox/acala-sandbox.yml
+- type: Conventions
+  url: conventions/acala-conventions.yml
+- type: Idempotency
+  url: conventions/acala-conventions.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

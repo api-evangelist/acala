@@ -1,0 +1,91 @@
+generated: '2026-07-17'
+method: searched
+source: https://evmdocs.acala.network/miscellaneous/common-errors.md
+description: >-
+  Error registry for Acala EVM+. Chain-level errors surface through the
+  JSON-RPC error object (code -32603, "execution fatal") carrying a Substrate
+  DispatchError { index, error }. The EVM pallet is module index 180; its
+  variants are enumerated below. RPC-transport level errors (outdated /
+  temporarily-banned transactions) are also captured. This is the non-payments
+  ErrorCatalog sibling; there is no card decline surface for this API.
+envelope:
+  transport: json-rpc-2.0
+  error_code: -32603
+  error_message: "execution fatal"
+  dispatch_error_shape: "{ index: <module>, error: <variant>, message: <text|None> }"
+  evm_module_index: 180
+error_codes:
+- code: "180/0"
+  name: AddressNotMapped
+  meaning: >-
+    Maintenance features called on a smart contract that has no EVM address
+    bound to it (should not normally occur).
+  action: Reach out to the Acala team to investigate.
+- code: "180/1"
+  name: ContractNotFound
+  meaning: Maintenance actions performed on an address that is not a smart contract.
+  action: Review the address being maintained (may be non-existent or deleted).
+- code: "180/2"
+  name: NoPermission
+  meaning: The account is not allowed to interact with the smart contract.
+  action: >-
+    Enable development mode to interact before publish, or have the maintainer
+    publish the contract to allow non-developer users.
+- code: "180/3"
+  name: ContractDevelopmentNotEnabled
+  meaning: The account does not have development mode enabled.
+  action: Enable development mode to interact with unpublished contracts.
+- code: "180/4"
+  name: ContractDevelopmentAlreadyEnabled
+  meaning: The account already has development mode enabled.
+  action: No action needed; disable development mode if desired.
+- code: "180/5"
+  name: ContractAlreadyPublished
+  meaning: The contract has already been published.
+  action: No action needed.
+- code: "180/6"
+  name: ContractExceedsMaxCodeSize
+  meaning: Deployed contract bytecode exceeds the maximum allowed code size.
+  action: Reduce contract size (split logic / use libraries).
+- code: "180/7"
+  name: ContractAlreadyExisted
+  meaning: A contract already exists at the target address.
+  action: Deploy to a fresh address / nonce.
+- code: "180/8"
+  name: OutOfStorage
+  meaning: The account has insufficient reserved storage for the operation.
+  action: Reserve additional storage before the operation.
+- code: "180/9"
+  name: ChargeFeeFailed
+  meaning: Charging the transaction/storage fee failed.
+  action: Ensure the account holds sufficient native balance for fees.
+- code: "180/10"
+  name: CannotKillContract
+  meaning: The contract cannot be selfdestructed/killed.
+  action: Review contract lifecycle preconditions.
+- code: "180/11"
+  name: ReserveStorageFailed
+  meaning: Reserving storage deposit failed.
+  action: Ensure sufficient free balance to reserve storage.
+- code: "180/12"
+  name: UnreserveStorageFailed
+  meaning: Unreserving storage deposit failed.
+  action: Review storage accounting for the account.
+- code: "180/13"
+  name: ChargeStorageFailed
+  meaning: Charging the storage rent/deposit failed.
+  action: Ensure sufficient balance for storage charges.
+- code: "180/14"
+  name: InvalidDecimals
+  meaning: Token decimals supplied are invalid for the operation.
+  action: Use the correct decimals for the token (ACA/KAR native = 12).
+- code: transaction-outdated
+  name: Transaction is outdated
+  meaning: The transaction nonce is lower than the account's current nonce.
+  action: Resubmit with the correct (current) nonce.
+- code: transaction-temporarily-banned
+  name: Transaction is temporary banned
+  meaning: >-
+    The transaction was recently rejected and is temporarily banned from the
+    pool to prevent spam.
+  action: Wait and resubmit later, or adjust gas/parameters.

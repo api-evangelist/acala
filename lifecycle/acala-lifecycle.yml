@@ -1,0 +1,52 @@
+generated: '2026-07-17'
+method: searched
+source: https://evmdocs.acala.network/network/network-configuration.md
+description: >-
+  Network/version lifecycle for Acala EVM+. Acala runs a production mainnet
+  (Acala, chain id 787) plus a beta/staging channel, its Kusama sister network
+  Karura (686), and the Mandala TC9 testnet (595) for development. Versioning is
+  by network + runtime upgrade (Substrate on-chain runtime versioning) rather
+  than a dated REST API version.
+versioning:
+  scheme: network-and-runtime
+  networks:
+  - name: Acala
+    role: mainnet
+    chain_id: 787
+    symbol: ACA
+    node_endpoint: wss://acala-rpc.aca-api.network
+    eth_rpc_endpoint: https://eth-rpc-acala.aca-api.network
+    explorer: https://blockscout.acala.network
+  - name: Acala Beta
+    role: staging
+    eth_rpc_endpoint: https://eth-rpc-acala.aca-staging.network
+  - name: Karura
+    role: mainnet-kusama
+    chain_id: 686
+    symbol: KAR
+    node_endpoint: wss://karura-rpc.aca-api.network
+    eth_rpc_endpoint: https://eth-rpc-karura.aca-api.network
+    explorer: https://blockscout.karura.network
+  - name: Mandala TC9
+    role: testnet
+    chain_id: 595
+    symbol: mACA
+    node_endpoint: wss://mandala-tc9-rpc.aca-staging.network
+    eth_rpc_endpoint: https://eth-rpc-tc9.aca-staging.network
+    explorer: https://blockscout.mandala.aca-staging.network
+  docs: https://evmdocs.acala.network/network/network-configuration.md
+explorers:
+- https://blockscout.acala.network
+- https://blockscout.karura.network
+subquery_indexer: https://subql-query-acala.aca-api.network
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: >-
+    Breaking changes ship as on-chain Substrate runtime upgrades governed
+    on-chain; no HTTP Sunset/Deprecation header contract is published for the
+    JSON-RPC surface.
+sla:
+  url: null
+  uptime_target: null
+status_page: null

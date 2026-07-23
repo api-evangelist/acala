@@ -1,0 +1,118 @@
+generated: '2026-07-17'
+method: searched
+source: https://www.npmjs.com/org/acala-network
+description: >-
+  First-party @acala-network client libraries published to npm. These cover the
+  Substrate/Polkadot.js access path (api, types, type-definitions, api-derive,
+  sdk, sdk-core), the Ethereum-compatible EVM+ path (eth-rpc-adapter,
+  eth-providers, bodhi), the Solidity predeploy/precompile contract library
+  (contracts), and the chain-forking test tool (chopsticks). All are maintained
+  by the Acala Foundation in the github.com/AcalaNetwork organization.
+packages:
+- language: javascript
+  registry: npm
+  name: "@acala-network/api"
+  version: 6.3.0
+  url: https://www.npmjs.com/package/@acala-network/api
+  install: npm install @acala-network/api
+  repository: https://github.com/AcalaNetwork/acala.js
+  description: Acala JS API — Polkadot.js API extended with Acala/Karura types.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@acala-network/types"
+  version: 6.3.0
+  url: https://www.npmjs.com/package/@acala-network/types
+  install: npm install @acala-network/types
+  repository: https://github.com/AcalaNetwork/acala.js
+  description: Acala types for @polkadot/api.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@acala-network/type-definitions"
+  version: 5.1.2
+  url: https://www.npmjs.com/package/@acala-network/type-definitions
+  install: npm install @acala-network/type-definitions
+  repository: https://github.com/AcalaNetwork/acala.js
+  description: Polkadot.js type definitions for Acala Network.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@acala-network/api-derive"
+  version: 6.3.0
+  url: https://www.npmjs.com/package/@acala-network/api-derive
+  install: npm install @acala-network/api-derive
+  repository: https://github.com/AcalaNetwork/acala.js
+  description: Additional polkadot.js derives for Acala Network.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@acala-network/sdk"
+  version: 4.1.15
+  url: https://www.npmjs.com/package/@acala-network/sdk
+  install: npm install @acala-network/sdk
+  repository: https://github.com/AcalaNetwork/acala.js
+  description: Acala Network SDK — high-level wallet, swap, and homa/loan helpers.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@acala-network/sdk-core"
+  version: 4.1.15
+  url: https://www.npmjs.com/package/@acala-network/sdk-core
+  install: npm install @acala-network/sdk-core
+  repository: https://github.com/AcalaNetwork/acala.js
+  description: The core of the Acala Network SDK (token, fixed-point, currency).
+  official: true
+- language: javascript
+  registry: npm
+  name: "@acala-network/eth-rpc-adapter"
+  version: 2.10.0
+  url: https://www.npmjs.com/package/@acala-network/eth-rpc-adapter
+  install: npm install @acala-network/eth-rpc-adapter
+  repository: https://github.com/AcalaNetwork/bodhi.js
+  description: >-
+    EVM+ RPC Adapter — wraps Substrate RPC to serve Ethereum JSON-RPC so
+    standard Ethereum dApps/tools work against Acala EVM+.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@acala-network/eth-providers"
+  version: 2.10.0
+  url: https://www.npmjs.com/package/@acala-network/eth-providers
+  install: npm install @acala-network/eth-providers
+  repository: https://github.com/AcalaNetwork/bodhi.js
+  description: Ethers-compatible providers for the Acala EVM+ environment.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@acala-network/bodhi"
+  version: 2.10.0
+  url: https://www.npmjs.com/package/@acala-network/bodhi
+  install: npm install @acala-network/bodhi
+  repository: https://github.com/AcalaNetwork/bodhi.js
+  description: >-
+    bodhi.js — ethers.js-compatible signer/provider that lets Polkadot wallets
+    sign EVM+ transactions.
+  official: true
+- language: solidity
+  registry: npm
+  name: "@acala-network/contracts"
+  version: 4.5.0
+  url: https://www.npmjs.com/package/@acala-network/contracts
+  install: npm install @acala-network/contracts
+  repository: https://github.com/AcalaNetwork/predeploy-contracts
+  description: >-
+    Acala Solidity contract library — interfaces to the EVM+ predeployed
+    precompiled contracts (Token, DEX, Homa, StableAsset, EVM, Oracle, etc.).
+  official: true
+- language: javascript
+  registry: npm
+  name: "@acala-network/chopsticks"
+  version: 1.5.0
+  url: https://www.npmjs.com/package/@acala-network/chopsticks
+  install: npm install @acala-network/chopsticks
+  repository: https://github.com/AcalaNetwork/chopsticks
+  description: >-
+    Chopsticks — create a parallel-reality fork of any Substrate network for
+    local testing and dry-running of transactions.
+  official: true

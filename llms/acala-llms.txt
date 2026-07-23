@@ -1,0 +1,41 @@
+<!-- generated: 2026-07-17 -->
+<!-- method: searched -->
+<!-- source: https://evmdocs.acala.network/llms.txt -->
+# Acala EVM+ Documentation
+
+## Acala EVM+ Dev Documentation
+
+- [Getting started](https://evmdocs.acala.network/readme.md)
+- [About Acala EVM+](https://evmdocs.acala.network/general/about-acala-evm+.md)
+- [Security considerations of developing in Acala EVM+](https://evmdocs.acala.network/general/security-considerations-of-developing-in-acala-evm+.md)
+- [Network configuration](https://evmdocs.acala.network/network/network-configuration.md): Addressing and identification information of Acala networks.
+- [Network setup](https://evmdocs.acala.network/network/network-setup.md): Instructions on how to run a node in each of the networks
+- [Local development network](https://evmdocs.acala.network/network/network-setup/local-development-network.md): Instructions on how to run a full local development network
+- [Connecting to a public network with local RPC node](https://evmdocs.acala.network/network/network-setup/connecting-to-a-public-network-with-local-rpc-node.md): Instructions on how to setup local RPC node that connects to a public network
+- [Predeployed smart contracts](https://evmdocs.acala.network/network/predeployed-smart-contracts.md): Section detailing the precompiled and predeployed smart contracts of the Acala EVM+.
+- [Details](https://evmdocs.acala.network/network/predeployed-smart-contracts/details.md)
+- [ACA token](https://evmdocs.acala.network/network/aca-token.md): Explanation on how ACA ERC20 ties into Acala native token.
+- [Gas parameters](https://evmdocs.acala.network/network/gas-parameters.md)
+- [Tooling](https://evmdocs.acala.network/tooling/tooling.md)
+- [Faucet](https://evmdocs.acala.network/tooling/faucet.md)
+- [RPC adapter](https://evmdocs.acala.network/tooling/rpc-adapter.md): What is it and how to use it to debug your project
+- [Chain explorer](https://evmdocs.acala.network/tooling/chain-explorer.md): Instructions on how to use the chain explorers of Acala EVM+
+- [MetaMask](https://evmdocs.acala.network/tooling/metamask.md)
+- [Connect to the network](https://evmdocs.acala.network/tooling/metamask/connect-to-the-network.md): Instructions on how to connect MetaMask to Mandala EVM+ in order to interact with the smart contracts deployed on it.
+- [Simple transactions](https://evmdocs.acala.network/tooling/metamask/simple-transactions.md): Example on how to transfer ACA using MetaMask.
+- [EVM playground](https://evmdocs.acala.network/tooling/evm-playground.md)
+- [Deploy smart contracts](https://evmdocs.acala.network/tooling/evm-playground/deploy-smart-contracts.md): Instructions on how to deploy a smart contract using EVM playgrounds
+- [Interacting with smart contracts](https://evmdocs.acala.network/tooling/evm-playground/interacting-with-smart-contracts.md): Instructions on how to use EVM playgrounds to interact with smart contracts deployed on Acala EVM+.
+- [Remix IDE](https://evmdocs.acala.network/tooling/remix-ide.md): Introduction into using Remix IDE with Acala EVM+.
+- [Deploying a smart contract](https://evmdocs.acala.network/tooling/remix-ide/deploying-a-smart-contract.md): Walk through on deploying a smart contract to Acala EVM+ using Remix IDE.
+- [Interacting with the deployed smart contracts](https://evmdocs.acala.network/tooling/remix-ide/interacting-with-the-deployed-smart-contracts.md): Walk through on how to interact with an already deployed smart contract.
+- [Examples](https://evmdocs.acala.network/examples/examples.md): Start using your preferred development framework and toolings with Acala EVM+.
+- [Special features](https://evmdocs.acala.network/special-features/special-features.md)
+- [Using polkadot wallet to interact with EVM+](https://evmdocs.acala.network/special-features/using-bodhi.js-to-deploy-smart-contract-and-interact-with-it.md)
+- [Batch EVM transactions](https://evmdocs.acala.network/special-features/batch-evm-transactions.md)
+- [Acala Multichain Asset Router](https://evmdocs.acala.network/applications/asset-router.md)
+- [FAQs](https://evmdocs.acala.network/miscellaneous/faqs.md)
+- [Common errors](https://evmdocs.acala.network/miscellaneous/common-errors.md)
+- [ETHDenver](https://evmdocs.acala.network/miscellaneous/ethdenver.md): Acala at ETHDenver 2022 #BUIDLWeek
+- [Request support](https://evmdocs.acala.network/miscellaneous/request-support.md): Instructions how to request support for your project in a format that will allow for the most efficient support.
+- [Feedback or suggestions?](https://evmdocs.acala.network/miscellaneous/feedback.md)
