@@ -12,7 +12,106 @@ edges:
   trust_score: 2
   detected_by: sweep-crypto.py
   first_seen: '2026-10-14'
+- partner_name: npm registry
+  partner: npm
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (JavaScript/TypeScript)
+  evidence: https://www.npmjs.com/package/@acala-network/api
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: npm registry (public registry JSON)
+    spec_file: null
+    language: JavaScript/TypeScript
+    packages:
+    - name: '@acala-network/api'
+      version: 6.3.0
+      released: '2026-02-03'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@acala-network/api
+      repo_leg: github-org:acalanetwork
+      publisher_leg: email:acala.network
+      matched_by: domain
+    - name: '@acala-network/api-derive'
+      version: 6.3.0
+      released: '2026-02-03'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@acala-network/api-derive
+      repo_leg: github-org:acalanetwork
+      publisher_leg: email:acala.network
+      matched_by: domain
+    - name: '@acala-network/bodhi'
+      version: 2.10.0
+      released: '2026-02-03'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@acala-network/bodhi
+      repo_leg: github-org:acalanetwork
+      publisher_leg: org:acala-network
+      matched_by: github-org
+    - name: '@acala-network/contracts'
+      version: 4.5.0
+      released: '2026-02-03'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@acala-network/contracts
+      repo_leg: github-org:acalanetwork
+      publisher_leg: org:acala-network
+      matched_by: github-org
+    - name: '@acala-network/sdk'
+      version: 4.1.15
+      released: '2026-02-03'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@acala-network/sdk
+      repo_leg: github-org:acalanetwork
+      publisher_leg: org:acala-network
+      matched_by: github-org
+    - name: '@acala-network/sdk-core'
+      version: 4.1.15
+      released: '2026-02-03'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@acala-network/sdk-core
+      repo_leg: github-org:acalanetwork
+      publisher_leg: org:acala-network
+      matched_by: github-org
+    - name: '@acala-network/type-definitions'
+      version: 5.1.2
+      released: '2026-02-03'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@acala-network/type-definitions
+      repo_leg: github-org:acalanetwork
+      publisher_leg: email:acala.network
+      matched_by: domain
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
 generated: '2026-10-13'
 method: searched
 checked:
 - https://api.coingecko.com/api/v3/exchanges
+- https://api.nuget.org/v3
+- https://crates.io/api/v1
+- https://proxy.golang.org
+- https://pypi.org/pypi
+- https://registry.npmjs.org
+- https://repo1.maven.org/maven2
+- https://rubygems.org/api/v1
+source:
+- https://api.nuget.org/v3
+- https://crates.io/api/v1
+- https://proxy.golang.org
+- https://pypi.org/pypi
+- https://registry.npmjs.org
+- https://repo1.maven.org/maven2
+- https://rubygems.org/api/v1
