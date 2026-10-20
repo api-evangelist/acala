@@ -14,3 +14,121 @@
   relationship: connector-coverage
   status: not-a-workflow
   arazzo: null
+- slug: acala-npm-registry
+  label: npm registry
+  partner: npm
+  partner_name: npm registry
+  category: official SDK (JavaScript/TypeScript)
+  type: register
+  channel: package-registry
+  evidence: https://www.npmjs.com/package/@acala-network/api
+  source: edge
+  relationship: distribution-channel
+  contract_reference:
+    register: npm registry (public registry JSON)
+    spec_file: null
+    language: JavaScript/TypeScript
+    packages:
+    - name: '@acala-network/api'
+      version: 6.3.0
+      released: '2026-02-03'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@acala-network/api
+      repo_leg: github-org:acalanetwork
+      publisher_leg: email:acala.network
+      matched_by: domain
+    - name: '@acala-network/api-derive'
+      version: 6.3.0
+      released: '2026-02-03'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@acala-network/api-derive
+      repo_leg: github-org:acalanetwork
+      publisher_leg: email:acala.network
+      matched_by: domain
+    - name: '@acala-network/bodhi'
+      version: 2.10.0
+      released: '2026-02-03'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@acala-network/bodhi
+      repo_leg: github-org:acalanetwork
+      publisher_leg: org:acala-network
+      matched_by: github-org
+    - name: '@acala-network/contracts'
+      version: 4.5.0
+      released: '2026-02-03'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@acala-network/contracts
+      repo_leg: github-org:acalanetwork
+      publisher_leg: org:acala-network
+      matched_by: github-org
+    - name: '@acala-network/sdk'
+      version: 4.1.15
+      released: '2026-02-03'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@acala-network/sdk
+      repo_leg: github-org:acalanetwork
+      publisher_leg: org:acala-network
+      matched_by: github-org
+    - name: '@acala-network/sdk-core'
+      version: 4.1.15
+      released: '2026-02-03'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@acala-network/sdk-core
+      repo_leg: github-org:acalanetwork
+      publisher_leg: org:acala-network
+      matched_by: github-org
+    - name: '@acala-network/type-definitions'
+      version: 5.1.2
+      released: '2026-02-03'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@acala-network/type-definitions
+      repo_leg: github-org:acalanetwork
+      publisher_leg: email:acala.network
+      matched_by: domain
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  status: not-a-workflow
+  arazzo: null
+- slug: acala-defillama
+  label: DefiLlama
+  partner: defillama
+  partner_name: DefiLlama
+  category: stablecoin data coverage
+  type: coverage
+  channel: partner-built
+  evidence: https://stablecoins.llama.fi/stablecoin/45
+  source: edge
+  relationship: connector-coverage
+  contract_reference:
+    register: DefiLlama stablecoins (stablecoins.llama.fi)
+    standard: null
+    spec_file: null
+    role: stablecoin-issuer
+    registered_name: aUSD Seed
+    register_id: https://stablecoins.llama.fi/stablecoin/45
+    matched_domain: acala.network
+    matched_by: domain+verified
+    stablecoins:
+    - symbol: aSEED
+      name: aUSD Seed
+      peg: peggedUSD
+      mechanism: crypto-backed
+      defillama: https://stablecoins.llama.fi/stablecoin/45
+    peg_mechanisms:
+    - crypto-backed
+    signal_note: 'coverage: DefiLlama tracks the issuer''s stablecoin(s); coins, pegs and circulation are context,
+      never counted'
+    detected_by: sweep-stablecoins-tokenization.py
+    detected: '2026-10-20'
+  status: not-a-workflow
+  arazzo: null
