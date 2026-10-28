@@ -64,6 +64,90 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Acala is a company surfaced as a portfolio company of pantera-capital, polychain and added to the API Evangelist network as a stub for enrichment. Sector: crypto. This profile is a lead awaiting the enrichment pipeline.
+Acala is the decentralized finance (DeFi) and liquidity hub of the Polkadot ecosystem, operating the Acala parachain (and its Kusama-based sister network Karura). Acala offers a scalable, Ethereum-compatible smart-contract platform called Acala EVM+, a decentralized stablecoin (aUSD), a liquid staking derivative (LDOT/LcDOT), and a trustless staking and swap layer. For developers, Acala EVM+ exposes a standard Ethereum JSON-RPC interface through its EVM+ RPC Adapter (eth-rpc-adapter), letting existing Ethereum dApps, wallets (MetaMask), and tooling (Hardhat, Remix, ethers.js, Truffle) interact with the Substrate-based chain with minimal changes, alongside a Substrate WebSocket RPC via the @acala-network Polkadot.js API and SDK packages.
 
-Backed by: pantera-capital, polychain — https://acala.network/
+**Areas:** Company · Cryptocurrency · Blockchain · DeFi · Polkadot · Smart Contracts · EVM · Stablecoins · JSON-RPC · Web3
+
+## Acala on APIs.io
+
+Everything profiled for Acala is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/acala/](https://apis.io/providers/acala/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Acala EVM+ JSON-RPC](https://apis.io/apis/acala/acala-evm-json-rpc/) — Acala EVM+ exposes a standard Ethereum JSON-RPC API through the EVM+ RPC Adapter, which wraps Substrate RPC calls to provide Ethereum execution-apis…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Acala Domain Security](https://apis.io/security/acala/acala-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://acala.network/)
+- [Documentation](https://wiki.acala.network/)
+- [Getting started](https://evmdocs.acala.network/readme.md)
+- [Support](https://discord.gg/5JJgXKSznc)
+- [Blog](https://acala.network/blog)
+- [Terms of service](https://acala.network/terms-of-use)
+- [Privacy policy](https://acala.network/privacy-policy)
+- [GitHub](https://github.com/AcalaNetwork)
+
+## API Evangelist rating
+
+**Kin Score 19.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 50.0 |
+| Access clarity | 0.0 |
+
+**Agent readiness 6.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | documented (partial credit) |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/acala/](https://apis.io/providers/acala/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Acala: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/acala/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
